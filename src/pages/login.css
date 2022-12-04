@@ -1,0 +1,77 @@
+.celltronems__login{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, #3498DB 17.4%, rgba(136, 185, 218, 0.488476) 53.21%, rgba(217, 217, 217, 0) 100%);
+}
+
+.celltronems__login-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    width: 931px;
+    height: 594px;
+    background: rgba(255, 255, 255, 0.53);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+
+.celltronems__login-container span{
+  
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 58px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.celltronems__login-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+    align-items: flex-start;
+    width: 752px;
+}
+
+.celltronems__login-email, .celltronems__login-password{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+label{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+}
+
+input{
+    width: 100%;
+    background: #FFFFFF;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+    outline: none;
+    border: none;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+button{
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24.2px;
+    padding: 17px 68px;
+    background: #0ABDE3;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    color: white;
+}
