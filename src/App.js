@@ -5,7 +5,6 @@ import Navbar from "./components/Navbar";
 import Protected from "./components/auth/Protected";
 import Home from "./pages/home/Home";
 import Login from "./pages/Login";
-import Products from "./pages/products/Products";
 import LoginProtected from "./components/auth/LoginProtected";
 import { useState } from "react";
 

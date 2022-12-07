@@ -36,8 +36,6 @@ const Login = ({ loginEvent }) => {
   };
 
   if (navigate) {
-    console.log("navigate setted true");
-
     return <Navigate to="/" />;
   }
 

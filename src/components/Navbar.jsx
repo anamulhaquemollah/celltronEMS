@@ -1,6 +1,6 @@
 import { React, useState } from "react";
-import { Link, Navigate } from "react-router-dom";
-import { AiOutlineMenu } from "react-icons/ai";
+import { Link } from "react-router-dom";
+
 
 import "./navbar.css";
 import reactimg from "../assets/React5.png";

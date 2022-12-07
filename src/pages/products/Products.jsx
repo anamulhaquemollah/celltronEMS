@@ -1,13 +1,13 @@
-import { useState, useContext } from "react";
+import { useContext } from "react";
 import { ProductsContext } from "../../components/context/ProductsContext";
-import { BsChevronCompactDown, BsChevronCompactUp } from "react-icons/bs";
+
 
 import "./products.css";
 import SingleProduct from "./product/SingleProduct";
 import Category from "./Category";
 
 const Products = () => {
-  const { products, _ } = useContext(ProductsContext);
+  const {products} = useContext(ProductsContext);
 
   return (
     <div className="product">

@@ -6,7 +6,6 @@ const Protected = ({ children }) => {
   const isLoggedIn = !!loginToken;
 
   if (isLoggedIn) {
-    console.log("protected isloggedin true");
     return children;
   }
   return <Navigate to="/login" replace />;

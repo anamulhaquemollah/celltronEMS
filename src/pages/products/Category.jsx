@@ -3,10 +3,10 @@ import { BsChevronCompactDown, BsChevronCompactUp } from "react-icons/bs";
 import { ProductsContext } from "../../components/context/ProductsContext";
 
 import "./products.css";
-import SingleProduct from "./product/SingleProduct";
+
 
 const Category = (category) => {
-  const { _, categories } = useContext(ProductsContext);
+  const {categories} = useContext(ProductsContext);
   const [showMenu, setShowMenu] = useState(false);
 
   const categoryHandler = () => {
@@ -30,7 +30,7 @@ const Category = (category) => {
       {showMenu && (
         <div className="dropdown-content">
           {categories.map((cat) => (
-            <a href="#" key={cat.uid}>
+            <a href="javascript:void(0)" key={cat.uid}>
               {cat.name}
             </a>
           ))}

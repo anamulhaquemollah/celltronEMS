@@ -1,12 +1,10 @@
 import { useEffect, useState } from "react";
 import axios, { getAuthHeader } from "../../api/axios";
-import { Navigate } from "react-router-dom";
 
 import { ProductsContext } from "../../components/context/ProductsContext";
 
 import "./home.css";
 import human from "../../assets/human.png";
-import fibre from "../../assets/string.png";
 import Products from "../products/Products";
 
 const Home = () => {
@@ -22,7 +20,6 @@ const Home = () => {
           { headers: getAuthHeader() }
         );
 
-        console.log("from home ", data.data["results"]);
         setProducts(data.data["results"]);
       } catch (e) {}
     })();
@@ -36,7 +33,6 @@ const Home = () => {
           { headers: getAuthHeader() }
         );
 
-        console.log("categories: ", data.data["results"]);
         setCategories(data.data["results"]);
       } catch (e) {}
     })();
@@ -62,7 +58,6 @@ const Home = () => {
               src={human}
               alt="a stylish man"
             />
-            {/* <span><img className="string" src={fibre} alt="" /></span> */}
           </div>
         </div>
       </div>
