@@ -75,3 +75,18 @@ label{
     border-radius: 20px;
     color: white;
 }
+
+@media screen and (max-width: 1024px) {
+    .celltronems__login-container{
+        gap: 2rem;
+        width: 80%;
+        height: 70%;
+    }
+    .celltronems__login-form{
+        width: 90%;
+    }
+
+    .loginInput{
+        width: 100%;
+    }
+}

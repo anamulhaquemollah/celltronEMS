@@ -1,25 +1,43 @@
-import {BrowserRouter, Routes, Route} from "react-router-dom"; 
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import "./App.css"; 
+import "./App.css";
 import Navbar from "./components/Navbar";
-import Home from "./pages/home/Home"; 
+import Protected from "./components/auth/Protected";
+import Home from "./pages/home/Home";
 import Login from "./pages/Login";
 import Products from "./pages/products/Products";
+import LoginProtected from "./components/auth/LoginProtected";
+import { useState } from "react";
 
 const App = () => {
+  const token = localStorage.getItem("token");
+  const [navigate, setNavigate] = useState(token != null);
+
+  const loginEventHandler = (loginResult) => setNavigate(loginResult);
+
   return (
     <BrowserRouter>
-      <Navbar />
+      {navigate && <Navbar />}
       <Routes>
-        <Route path="/" element={<Home/>}/>
+        <Route
+          path="/"
+          element={
+            <Protected>
+              <Home />
+            </Protected>
+          }
+        />
+        <Route
+          path="/login"
+          element={
+            <LoginProtected>
+              <Login loginEvent={loginEventHandler} />
+            </LoginProtected>
+          }
+        />
       </Routes>
-      {/* <Login /> */}
-     <Products/>
-     hello
     </BrowserRouter>
-    
-  )
+  );
+};
 
-}
-
-export default App
+export default App;

@@ -82,7 +82,9 @@
 }
 
 @media  screen and (max-width: 640px) {
-
+    .home{
+        height: 370px;
+    }
     .home__container{
         padding: 0 17px; 
     }
