@@ -30,9 +30,9 @@ const Category = (category) => {
       {showMenu && (
         <div className="dropdown-content">
           {categories.map((cat) => (
-            <a href="javascript:void(0)" key={cat.uid}>
+            <p key={cat.uid}>
               {cat.name}
-            </a>
+            </p>
           ))}
         </div>
       )}
