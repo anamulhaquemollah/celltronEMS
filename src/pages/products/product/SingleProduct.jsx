@@ -1,5 +1,3 @@
-import { useState, useContext } from "react";
-
 import "./singleproduct.css";
 
 import hoodie from "../../../assets/hoodie.png";
@@ -7,7 +5,7 @@ import shippingtruck from "../../../assets/shippingtruck.png";
 import Rating from "./Rating";
 
 const SingleProduct = ({ title, price, rating }) => {
-  // const [rating, setRating] = useState(2);
+ 
   const [principle, decimal] = price.split(".");
   return (
     <div className="singleproduct">
